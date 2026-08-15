@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>MIYA BHAI FF PANEL</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:#090a0f;color:#fff;font-family:Arial,sans-serif;display:flex;align-items:center;justify-content:center}
+.panel{width:92%;max-width:420px;padding:25px;border-radius:20px;background:#171821;box-shadow:0 0 35px rgba(255,50,50,.25)}
+h1{text-align:center;color:#ff3d3d;margin:5px 0 10px;font-size:28px}
+.demo{text-align:center;color:#00ff88;margin-bottom:25px}
+.uid{background:#22232e;padding:13px;border-radius:10px;margin-bottom:15px}
+.option{display:flex;align-items:center;justify-content:space-between;background:#22232e;padding:15px;margin:10px 0;border-radius:12px}
+button{border:0;border-radius:9px;padding:9px 18px;background:#4a4a4f;color:white;font-size:14px}
+button.active{background:#00a86b}
+.start{width:100%;margin-top:18px;padding:15px;background:#ef3434;font-size:17px;font-weight:bold}
+.note{text-align:center;color:#888;font-size:12px;margin-top:15px}
+#message{text-align:center;color:#00ff88;margin-top:12px;min-height:18px}
+</style>
+</head>
+<body>
+<div class="panel">
+<h1>MIYA BHAI FF PANEL</h1>
+<div class="demo">● DEMO MODE</div>
+<div class="uid">UID: <b>123456789</b></div>
+
+<div class="option"><span>Aim Assist</span><button onclick="toggle(this)">OFF</button></div>
+<div class="option"><span>ESP</span><button onclick="toggle(this)">OFF</button></div>
+<div class="option"><span>Headshot</span><button onclick="toggle(this)">OFF</button></div>
+<div class="option"><span>Speed</span><button onclick="toggle(this)">OFF</button></div>
+
+<button class="start" onclick="startDemo()">START DEMO</button>
+<div id="message"></div>
+<div class="note">Standalone UI demonstration only.</div>
+</div>
+
+<script>
+function toggle(btn){
+  btn.classList.toggle("active");
+  btn.innerText = btn.classList.contains("active") ? "ON" : "OFF";
+}
+function startDemo(){
+  document.getElementById("message").innerText="✓ Demo Started";
+}
+</script>
+</body>
+</html>
